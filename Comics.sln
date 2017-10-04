@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comics.Web", "Comics.Web\Comics.Web.csproj", "{FBC61BA6-C74B-4E72-98F1-6E855714CA4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comics.Lib", "Comics.Lib\Comics.Lib.csproj", "{F0DBB6A1-F56E-4715-A7C1-D8D29231EB8F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FBC61BA6-C74B-4E72-98F1-6E855714CA4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBC61BA6-C74B-4E72-98F1-6E855714CA4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBC61BA6-C74B-4E72-98F1-6E855714CA4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBC61BA6-C74B-4E72-98F1-6E855714CA4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0DBB6A1-F56E-4715-A7C1-D8D29231EB8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0DBB6A1-F56E-4715-A7C1-D8D29231EB8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0DBB6A1-F56E-4715-A7C1-D8D29231EB8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0DBB6A1-F56E-4715-A7C1-D8D29231EB8F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

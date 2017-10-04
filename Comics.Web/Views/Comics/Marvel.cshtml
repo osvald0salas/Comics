@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Comics.Lib.Comic>
+
+@{
+    ViewBag.Title = "Marvel";
+}
+
+<div style="background-image:url(../../img/marvel.jpg); background-repeat:no-repeat; 
+    background-position:left center; background-size:100px 40px; padding:10px 0px 0px 110px; margin:10px 0px 10px 0px; height:45px; vertical-align:middle;">
+    <div style="font-size:16pt; font-weight:bold;">Comic List</div></div>
+
+@using (Html.BeginForm("Marvel", "Comics", FormMethod.Post))
+{
+    <div class="form-inline" style="padding-bottom:10px;">
+        Comic name: @Html.TextBox("searchName", null, new { id = "name", @class = "form-control", @style = "" })
+        Issue: @Html.TextBox("searchIssue", null, new { id = "issue", @class = "form-control", @style = "" })
+        <input type="submit" value="Search" class="btn btn-success" style="" />
+    </div>
+}
+
+<table class="table">
+    <tr>
+        <th></th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Issue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Publisher)
+        </th>
+        <th></th>
+    </tr>
+    @{ 
+        if (null != Model && Model.Count()>0)
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <img src="@item.Thumbnail" height="100" width="100" />
+                    </td>
+                    <td style="vertical-align:middle;">
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td style="vertical-align:middle;">
+                        @Html.DisplayFor(modelItem => item.Issue)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Publisher)
+                    </td>
+                </tr>
+            }
+
+        }
+    }
+
+</table>

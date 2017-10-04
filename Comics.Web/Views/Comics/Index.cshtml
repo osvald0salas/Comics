@@ -1,0 +1,55 @@
+﻿@model IEnumerable<Comics.Lib.Comic>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Comic List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+    <span>&nbsp;|&nbsp;</span>
+    @Html.ActionLink("Search Marvel", "Marvel")
+</p>
+@using (Html.BeginForm("Search",  "Comics", FormMethod.Post))
+{
+    <div class="form-inline" style="padding-bottom:10px;">
+            Find by name: @Html.TextBox("searchName", null, new { id = "name", @class = "form-control" , @style=""})
+            <input type="submit" value="Search" class="btn btn-success" style="" />
+    </div>
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Issue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Publisher)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Issue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Publisher)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
